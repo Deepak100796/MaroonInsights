@@ -1,8 +1,10 @@
 import json
 import pandas as pd
-with open('assignment2.json', 'r') as jsonfile:
-     data = jsonfile.read()
-
+try:
+     with open('assignment2.json', 'r') as jsonfile:
+          data = jsonfile.read()
+except FileNotFoundError:
+     print("file not faund ! just check filename ")
 jsonobj = json.loads(data)
 # print(jsonobj)
 df = pd.read_json('assignment2.json')
