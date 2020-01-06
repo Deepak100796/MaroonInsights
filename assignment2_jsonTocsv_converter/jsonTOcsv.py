@@ -1,13 +1,13 @@
 import json
 import pandas as pd
 try:
-     with open('assignment2.json', 'r') as jsonfile:
+     with open('account.json', 'r') as jsonfile:
           data = jsonfile.read()
 except FileNotFoundError:
      print("file not faund ! just check filename ")
 jsonobj = json.loads(data)
 # print(jsonobj)
-df = pd.read_json('assignment2.json')
+df = pd.read_json('account.json')
 # print(df)
 df.to_csv('account.csv')
 print("account.csv created succesfully!")
@@ -21,7 +21,7 @@ print("account.csv created succesfully!")
 # import csv
 #
 # # read file
-# with open('assignment2.json', 'r') as jsonfile:
+# with open('account.json', 'r') as jsonfile:
 #     data = jsonfile.read()
 #
 # # parse file
